@@ -290,7 +290,7 @@ function layerdef(type){
 		if (type == "sinasturianu"){
 		//	dit maakt de layers voor de cycleway tags
 		map.addLayers([
-		//nodos asturiano y name
+/*		//nodos asturiano y name
 			make_layer(
 				QURL + "?data=(node[name]['name:es'!~'.*']['name:ast'!~'.*'](bbox);node(w););out+skel;",
 				name="#c#nodos sin asturianu pero con name",
