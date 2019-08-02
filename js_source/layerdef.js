@@ -70,7 +70,7 @@
 // VOCABULARI strokeWidth=Width of the line
 // VOCABULARI strokeLinecap=Form of the cap of the line
 // VOCABULARI strokeDashstyle=start/end of the line pixels in which start the line, if it is discontinuous
-// VOCABULARI pointRadius=number in píxels for the radius of the point
+// VOCABULARI pointRadius=number in pÃ­xels for the radius of the point
 // VOCABULARI fillColor=color you want to fill the cercle
 // VOCABULARI fillOpacity=0-1 transparency of the filled cercle
 // VOCABULARI graphicOpacity=0-1 transparency of the icon
@@ -265,10 +265,10 @@ function layerdef(type){
 				defaultPoint("green"),
 				false,
 			),
-		//vías asturiano y name	  
+		//vÃ­as asturiano y name	  
             make_layer(
 				QURL + "?data=(way[name]['name:ast'](bbox);node(w););out+skel;",
-				name="#l#víes asturianu y name",
+				name="#l#vÃ­es asturianu y name",
 				defaultSolidLine("green"),
 				false
 			),
