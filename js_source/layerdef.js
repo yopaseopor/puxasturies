@@ -317,7 +317,7 @@ function layerdef(type){
 		]);
 	}
 	
-	if (type == "icons"){
+	if (type == "coses"){
 
 		map.addLayers([
 				
