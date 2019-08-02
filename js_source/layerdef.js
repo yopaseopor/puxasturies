@@ -262,21 +262,21 @@ function layerdef(type){
 			make_layer(
 				QURL + "?data=(node[name]['name:ast'](bbox);node(w););out+skel;",
 				name="#c#nodos asturianu y name",
-				defaultPoint("green"),
+				defaultPoint("blue"),
 				false,
 			),
 		//vías asturiano y name	  
             make_layer(
 				QURL + "?data=(way[name]['name:ast'](bbox);node(w););out+skel;",
 				name="#l#víes asturianu y name",
-				defaultSolidLine("green"),
+				defaultSolidLine("blue"),
 				false
 			),
 		//relaciones asturiano y name	
             make_layer(
 				QURL + "?data=(relation[name]['name:ast'](bbox);node(w););out+skel;",
 				name="#dl#relaciones asturianu y name",
-				defaultDiscontinuousLine("green"),
+				defaultDiscontinuousLine("blue"),
 				false),
 			
 /*			  
@@ -287,50 +287,35 @@ function layerdef(type){
 	
 	
 	
-	if (type == "points"){
-		
+		if (type == "sinasturianu"){
+		//	dit maakt de layers voor de cycleway tags
 		map.addLayers([
-
-
-
+		//nodos asturiano y name
 			make_layer(
-				QURL + "?data=node[wheelchair=no](bbox);out+skel;",
-				name="#c#&nbspwheelchair=no",
-				defaultPoint("red"),
+				QURL + "?data=(node[name]['name:es'!~'.*']['name:ast'!~'.*'](bbox);node(w););out+skel;",
+				name="#c#nodos sin asturianu pero con name",
+				defaultPoint("yellow"),
+				false,
+			),
+		//vías asturiano y name	  
+            make_layer(
+				QURL + "?data=(way[name]['name:ast'](bbox);node(w););out+skel;",
+				name="#l#víes sin asturianu pero con name",
+				defaultSolidLine("yellow"),
 				false
 			),
-
-			make_layer(
-				QURL + "?data=node[wheelchair=limited](bbox);out+skel;",
-				name="#c#&nbspwheelchair=limited",
-				defaultPoint2("blue"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node[wheelchair=yes](bbox);out+skel;",
-				name="#to#&nbspwheelchair=yes<hr>",
-				defaultPoint3("black"),
-				false
-			),
+		//relaciones asturiano y name	
+            make_layer(
+				QURL + "?data=(relation[name]['name:ast'](bbox);node(w););out+skel;",
+				name="#dl#relaciones sin asturianu pero con name",
+				defaultDiscontinuousLine("yellow"),
+				false),
 			
-			make_layer(
-				QURL + "?data=node[crossing=unmarked](bbox);out+skel;",
-				name="#c#&nbspcrossing=unmarked<hr>",
-				{
-					strokeColor:"grey",
-					strokeOpacity:0.9,
-					strokeWidth:2,
-					pointRadius:4,
-					fillColor:"blue",
-					fillOpacity:0.75
-				},
-				false
-			),
-			
-			
+/*			  
+
+*/
 		]);
-	}	
+	}
 	
 	if (type == "icons"){
 
