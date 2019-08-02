@@ -106,9 +106,6 @@ function init(){
 		
 		var OSMFr = new OpenLayers.Layer.OSM("OSMFr", ["https://a.tile.openstreetmap.fr/osmfr/${z}/${x}/${y}.png", "https://b.tile.openstreetmap.fr/osmfr/${z}/${x}/${y}.png", "https://c.tile.openstreetmap.fr/osmfr/${z}/${x}/${y}.png"], { displayOutsideMaxExtent: true,numZoomLevels: 20, attribution: '&copy; Openstreetmap France | © <a href="https://www.openstreetmap.org/copyright/en" target="_blank">OpenStreetMap</a> contributors<br>Overlay data licensed under ODbL  '}); map.addLayer(OSMFr);
 		
-		var OSMCh = new OpenLayers.Layer.XYZ("OSMCh","https://tile.osm.ch/switzerland/${z}/${x}/${y}.png",{'attribution': ' © <a href="https://www.openstreetmap.org/copyright/en" target="_blank">OpenStreetMap</a> contributors<br>Overlay data licensed under ODbL '}); 
-		map.addLayer(OSMCh);
-		
 		var OMS = new OpenLayers.Layer.XYZ("OpenMapSurfer","https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/${z}/${x}/${y}.png",{'attribution': '<a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> <a href="https://www.openstreetmap.org/copyright/en" target="_blank">OpenStreetMap</a> contributors<br>Overlay data licensed under ODbL '}); 
 		map.addLayer(OMS);
 		

@@ -299,14 +299,14 @@ function layerdef(type){
 			),
 		//vías asturiano y name	  
             make_layer(
-				QURL + "?data=(way[name]['name:ast'](bbox);node(w););out+skel;",
+				QURL + "?data=(way[name]['name:es'!~'.*']['name:ast'!~'.*'](bbox);node(w););out+skel;",
 				name="#l#víes sin asturianu pero con name",
 				defaultSolidLine("yellow"),
 				false
 			),
 		//relaciones asturiano y name	
             make_layer(
-				QURL + "?data=(relation[name]['name:ast'](bbox);node(w););out+skel;",
+				QURL + "?data=(relation[name]['name:es'!~'.*']['name:ast'!~'.*'](bbox);node(w););out+skel;",
 				name="#dl#relaciones sin asturianu pero con name",
 				defaultDiscontinuousLine("yellow"),
 				false),
