@@ -101,8 +101,8 @@ function layerdef(type){
 		return(
 		{
 			strokeColor:color,
-			strokeOpacity:1,
-			strokeWidth:1,
+			strokeOpacity:0.5,
+			strokeWidth:10,
 			strokeLinecap: "square",
 		});
 	}
@@ -261,21 +261,21 @@ function layerdef(type){
 		//nodos asturiano y name
 			make_layer(
 				QURL + "?data=(node[name]['name:ast'](bbox);node(w););out+skel;",
-				name="#l#nodos asturiano y name",
+				name="#c#nodos asturianu y name",
 				defaultPoint("green"),
 				false,
 			),
 		//vías asturiano y name	  
             make_layer(
 				QURL + "?data=(way[name]['name:ast'](bbox);node(w););out+skel;",
-				name="#d#cycleway, oneway=yes",
+				name="#l#víes asturianu y name",
 				defaultSolidLine("green"),
 				false
 			),
 		//relaciones asturiano y name	
             make_layer(
 				QURL + "?data=(relation[name]['name:ast'](bbox);node(w););out+skel;",
-				name="#dl#cycleway segregated=yes",
+				name="#dl#relaciones asturianu y name",
 				defaultDiscontinuousLine("green"),
 				false),
 			
