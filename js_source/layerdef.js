@@ -255,28 +255,28 @@ function layerdef(type){
 	}
 	
 	
-		if (type == "lines"){
+		if (type == "asturianu"){
 		//	dit maakt de layers voor de cycleway tags
 		map.addLayers([
-		//highway=cycleway
+		//nodos asturiano y name
 			make_layer(
-				QURL + "?data=(way[highway=cycleway](bbox);node(w);way[highway~'path$|^footway$'][bicycle=designated](bbox);node(w););out+skel;",
-				name="#l#highway=cycleway",
-				defaultSolidLine("red"),
+				QURL + "?data=(node[name]['name:ast'](bbox);node(w););out+skel;",
+				name="#l#nodos asturiano y name",
+				defaultPoint("green"),
 				false,
 			),
-			  
+		//vías asturiano y name	  
             make_layer(
-				QURL + "?data=(way[highway=cycleway][oneway=yes](bbox);node(w););out+skel;",
+				QURL + "?data=(way[name]['name:ast'](bbox);node(w););out+skel;",
 				name="#d#cycleway, oneway=yes",
-				defaultDashedLine("green"),
+				defaultSolidLine("green"),
 				false
 			),
-			
+		//relaciones asturiano y name	
             make_layer(
-				QURL + "?data=(way[highway=cycleway][segregated=yes](bbox);node(w););out+skel;", 
+				QURL + "?data=(relation[name]['name:ast'](bbox);node(w););out+skel;",
 				name="#dl#cycleway segregated=yes",
-				defaultDiscontinuousLine("cyan"),
+				defaultDiscontinuousLine("green"),
 				false),
 			
 /*			  
